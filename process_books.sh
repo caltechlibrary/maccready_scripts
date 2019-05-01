@@ -26,25 +26,27 @@
 # mount -t cifs //131.215.225.60/Archives/Workspace -o username=tkeswick,domain=LIBRARY,users,sec=ntlmssp /mnt/Workspace
 ##
 
-bash ./format_book_mods.sh
+path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-php ./edit_book_mods.php
+bash "${path}"/format_book_mods.sh
 
-php ./validate_mods.php
+php "${path}"/edit_book_mods.php
 
-bash ./create_book_directories.sh
+php "${path}"/validate_mods.php
 
-php ./fetch_page_pids.php
+bash "${path}"/create_book_directories.sh
 
-php ./fetch_page_datastreams.php
+php "${path}"/fetch_page_pids.php
 
-php ./create_page_mods.php
+php "${path}"/fetch_page_datastreams.php
 
-php ./move_page_datastreams.php
+php "${path}"/create_page_mods.php
 
-php ./create_obj_jp2.php
+php "${path}"/move_page_datastreams.php
 
-php ./move_preservation_files.php
+php "${path}"/create_obj_jp2.php
+
+php "${path}"/move_preservation_files.php
 
 # Next steps:
 # - transfer datastreams to new server
