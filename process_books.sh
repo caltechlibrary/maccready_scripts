@@ -11,13 +11,13 @@
 #
 # drush idcrudfp \
 #   --user=1 \
-#   --root=/var/www/html/drupal7
+#   --root=/var/www/html/drupal7 \
 #   --pid_file=/tmp/MacCreadyPB_07_02-bookCModel-PIDs.txt \
 #   --solr_query="PID:pbm\:* AND RELS_EXT_hasModel_uri_s:info\:fedora\/islandora\:bookCModel AND mods_relatedItem_host_note_s:Part\ of\ Series\ 7\:\ Audio-Visual\ material\;\ Subseries\ 2*"
 #
 # drush idcrudfd \
 #   --user=1 \
-#   --root=/var/www/html/drupal7
+#   --root=/var/www/html/drupal7 \
 #   --pid_file=/tmp/MacCreadyPB_07_02-bookCModel-PIDs.txt \
 #   --dsid=MODS \
 #   --datastreams_directory=/tmp/MacCreadyPB_07_02-books \
