@@ -40,7 +40,7 @@ foreach ($dirItem as $fileInfo) {
   // echo "book pid: " . $book_pid . "\n";
 
   // fetch page PIDs
-  // echo "⬇️  saving page PIDs for book $book_pid \n";
+  echo "⬇️  saving page PIDs for book $book_pid \n";
   $page_pids_file = $book_directory_path . '/page_pids';
   $fetch_page_pids = "drush idcrudfp --root=/var/www/html/drupal7 --user=1 --pid_file=$page_pids_file --is_member_of=$book_pid";
   exec($fetch_page_pids);
