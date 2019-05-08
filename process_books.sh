@@ -44,6 +44,8 @@ php "${path}"/create_page_mods.php
 
 php "${path}"/move_page_datastreams.php
 
+php "${path}"/create_book_tn.php
+
 php "${path}"/create_obj_jp2.php
 
 php "${path}"/move_preservation_files.php
